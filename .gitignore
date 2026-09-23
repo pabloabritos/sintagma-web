@@ -1,0 +1,6 @@
+.DS_Store
+
+# Originales en alta resolución: la web usa solo assets/web
+assets/*
+!assets/web/
+!assets/README.md
