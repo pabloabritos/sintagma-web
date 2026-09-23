@@ -207,6 +207,7 @@ h3 {
   min-height: 48px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 999px;
   padding: 0 22px;
   border: 1px solid transparent;
@@ -230,7 +231,6 @@ h3 {
 }
 
 .hero-instagram {
-  gap: 8px;
   margin-top: 12px;
 }
 
