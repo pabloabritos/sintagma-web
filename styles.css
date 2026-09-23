@@ -413,7 +413,8 @@ figcaption strong {
 }
 
 .amenities-grid article,
-.info-panel {
+.info-panel,
+.contact-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
@@ -557,6 +558,13 @@ figcaption strong {
   border: 0;
 }
 
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr);
+  gap: clamp(24px, 5vw, 76px);
+  align-items: center;
+}
+
 .contact-section::before {
   width: min(46vw, 620px);
   height: min(22vw, 290px);
@@ -572,6 +580,29 @@ figcaption strong {
 
 .contact-email {
   margin-top: 18px;
+}
+
+.contact-card {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.contact-card dt {
+  color: var(--red);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-card dd {
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .contact-email strong {
