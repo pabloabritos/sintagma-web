@@ -229,6 +229,11 @@ h3 {
   box-shadow: 0 6px 16px rgba(23, 23, 23, 0.06);
 }
 
+.hero-instagram {
+  gap: 8px;
+  margin-top: 12px;
+}
+
 .scroll-cue {
   position: absolute;
   z-index: 1;
