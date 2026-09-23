@@ -605,6 +605,12 @@ figcaption strong {
   overflow-wrap: anywhere;
 }
 
+.contact-card a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .contact-email strong {
   color: var(--ink);
   font-weight: 600;
