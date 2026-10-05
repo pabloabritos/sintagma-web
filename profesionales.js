@@ -88,13 +88,33 @@ const loadHonorarios = async () => {
     const doc = new DOMParser().parseFromString(page.content.rendered, "text/html");
     const button = [...doc.querySelectorAll("a")].find((a) => /aranceles profesionales m[ií]nimos/i.test(a.textContent));
     if (button?.href.startsWith("https://cppc.org.ar/")) {
-      document.querySelector("[data-honorarios]").href = button.href;
+      honorariosLink.href = button.href;
     }
   } catch {
     // Queda el link a la página Institucionales.
   }
 };
 
+// La página del Colegio tarda unos 4 segundos en responder. Si se toca el link antes,
+// se abre la pestaña igual y se la manda al PDF (o a la página) cuando termina la búsqueda.
+const honorariosLink = document.querySelector("[data-honorarios]");
+let honorariosReady = false;
+const honorariosLookup = loadHonorarios().finally(() => {
+  honorariosReady = true;
+});
+
+honorariosLink.addEventListener("click", (event) => {
+  if (honorariosReady) return;
+  const tab = window.open("", "_blank");
+  if (!tab) return;
+  event.preventDefault();
+  tab.opener = null;
+  tab.document.title = "Honorarios mínimos";
+  tab.document.body.textContent = "Abriendo honorarios mínimos…";
+  honorariosLookup.then(() => {
+    tab.location.href = honorariosLink.href;
+  });
+});
+
 loadFeed("cppc");
 loadFeed("caja");
-loadHonorarios();
