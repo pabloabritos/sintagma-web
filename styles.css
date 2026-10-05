@@ -305,6 +305,10 @@ h3 {
   padding: clamp(72px, 10vw, 132px) clamp(18px, 5vw, 76px);
 }
 
+.section {
+  overflow-x: clip;
+}
+
 .section::before {
   width: min(42vw, 560px);
   height: min(20vw, 260px);
@@ -990,8 +994,7 @@ body.lightbox-open {
   }
 }
 
-.nav-toggle,
-.nav-long {
+.nav-toggle {
   display: none;
 }
 
@@ -1061,13 +1064,5 @@ body.lightbox-open {
     border-bottom: 1px solid var(--line);
     text-decoration: none;
     line-height: 1.35;
-  }
-
-  .nav-long {
-    display: inline;
-  }
-
-  .nav-short {
-    display: none;
   }
 }
