@@ -926,6 +926,47 @@ body.lightbox-open {
   line-height: 1.5;
 }
 
+.pro-group summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.pro-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.pro-group summary::after {
+  content: "+";
+  color: var(--red);
+  font-weight: 700;
+}
+
+.pro-group[open] summary::after {
+  content: "−";
+}
+
+.pro-group summary:hover {
+  color: var(--red);
+}
+
+.pro-group ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 2px;
+  padding: 0 0 0 14px;
+  border-left: 2px solid var(--red-wash);
+  list-style: none;
+}
+
+.pro-links .pro-group li {
+  padding: 0;
+  border: 0;
+}
+
 .pro-list .pro-loading {
   color: var(--muted);
   line-height: 1.6;
