@@ -794,7 +794,9 @@ body.lightbox-open {
   }
 
   .site-nav {
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px 10px;
     font-size: 0.68rem;
   }
 
@@ -832,5 +834,119 @@ body.lightbox-open {
   .site-footer {
     flex-direction: column;
     padding-inline: 16px;
+  }
+}
+
+.pro-page {
+  min-height: 80vh;
+  padding-top: clamp(124px, 14vw, 170px);
+}
+
+.pro-profession {
+  margin-bottom: 18px;
+}
+
+.pro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.pro-card {
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 44px rgba(23, 23, 23, 0.07);
+}
+
+.pro-news {
+  grid-row: span 2;
+}
+
+.pro-card h3 {
+  font-size: 1.2rem;
+}
+
+.pro-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.pro-source {
+  font-size: 0.92rem;
+}
+
+.pro-list,
+.pro-links {
+  display: grid;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.pro-list li,
+.pro-links li {
+  display: grid;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pro-list li:first-child,
+.pro-links li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.pro-list time {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pro-list a {
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.pro-list a:hover,
+.pro-links a:hover {
+  color: var(--red);
+}
+
+.pro-links a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(23, 23, 23, 0.3);
+}
+
+.pro-links span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pro-list .pro-loading {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pro-recent {
+  margin-top: 22px;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--red);
+}
+
+@media (max-width: 900px) {
+  .pro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-news {
+    grid-row: auto;
   }
 }

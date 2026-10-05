@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Información útil para profesionales: novedades del Colegio de Psicólogos de Córdoba, honorarios mínimos y accesos a la Caja de Previsión."
+    >
+    <title>Para profesionales | Sintagma</title>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:url" content="https://sintagmaconsultorios.com/profesionales">
+    <meta property="og:title" content="Para profesionales | Sintagma">
+    <meta property="og:description" content="Novedades del Colegio de Psicólogos de Córdoba, honorarios mínimos y accesos a la Caja de Previsión.">
+    <meta property="og:image" content="https://sintagmaconsultorios.com/assets/web/og-image-v2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <img class="brand-logo" src="assets/web/logo.png" alt="" onerror="this.style.display='none'">
+      </a>
+
+      <nav class="site-nav">
+        <a href="index.html#espacios">Consultorios</a>
+        <a href="index.html#amenities">Servicios</a>
+        <a href="index.html#informacion">Información</a>
+        <a href="profesionales.html" aria-current="page">Profesionales</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section pro-page">
+        <div class="section-heading">
+          <p class="eyebrow">Para profesionales</p>
+          <h2>Información útil para tu práctica.</h2>
+          <p>
+            Reunimos en un solo lugar las novedades y accesos que más se consultan. Todo sale de los sitios oficiales y
+            las novedades se actualizan solas; ante cualquier duda, consultá la fuente.
+          </p>
+        </div>
+
+        <p class="eyebrow pro-profession">Psicología</p>
+
+        <div class="pro-grid">
+          <article class="pro-card pro-news">
+            <h3>Novedades del Colegio de Psicólogos</h3>
+            <p class="pro-source">Obras sociales, liquidaciones, gremial, becas y cursos.</p>
+            <ul class="pro-list" data-feed="cppc">
+              <li class="pro-loading">Cargando novedades…</li>
+            </ul>
+            <a class="text-link" href="https://cppc.org.ar/" target="_blank" rel="noreferrer">Ver todo en cppc.org.ar</a>
+          </article>
+
+          <article class="pro-card">
+            <h3>Honorarios mínimos</h3>
+            <p>
+              El Colegio fija por resolución los honorarios mínimos de referencia para la práctica clínica y los
+              actualiza periódicamente.
+            </p>
+            <a class="text-link" href="https://cppc.org.ar/institucionales/" target="_blank" rel="noreferrer">
+              Ver honorarios vigentes
+            </a>
+          </article>
+
+          <article class="pro-card">
+            <h3>Caja de Previsión</h3>
+            <p class="pro-source">Caja de Previsión Social para Profesionales de la Salud de Córdoba.</p>
+            <ul class="pro-links">
+              <li>
+                <a href="https://cajasalud.com.ar/autogestion/" target="_blank" rel="noreferrer">Boleta de pago</a>
+                <span>Se genera desde Autogestión o la app “Caja de Salud Córdoba”.</span>
+              </li>
+              <li>
+                <a href="https://cajasalud.com.ar/activos/aportes/" target="_blank" rel="noreferrer">Aportes</a>
+                <span>Escala vigente, formas de pago y débito automático.</span>
+              </li>
+              <li>
+                <a href="https://cajasalud.com.ar/prestamo-personal-a-sola-firma/" target="_blank" rel="noreferrer">Préstamo personal a sola firma</a>
+              </li>
+              <li>
+                <a href="https://cajasalud.com.ar/prestamo-personal-con-garantia-deotro-afiliado-o-con-garantia-de-terceros/" target="_blank" rel="noreferrer">Préstamo personal con garantía</a>
+              </li>
+              <li>
+                <a href="https://cajasalud.com.ar/creditos-para-compra-de-equipamiento/" target="_blank" rel="noreferrer">Créditos para compra de equipamiento</a>
+              </li>
+            </ul>
+            <div class="pro-recent" data-feed-wrap="caja" hidden>
+              <p class="pro-source">Novedades recientes</p>
+              <ul class="pro-list" data-feed="caja"></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Sintagma · Consultorios profesionales</p>
+      <a href="index.html">Volver al inicio</a>
+    </footer>
+
+    <script src="profesionales.js"></script>
+  </body>
+</html>
