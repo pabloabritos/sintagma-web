@@ -31,11 +31,15 @@
         <img class="brand-logo" src="assets/web/logo.png" alt="" onerror="this.style.display='none'">
       </a>
 
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
         <a href="#espacios">Consultorios</a>
         <a href="#amenities">Servicios</a>
         <a href="#informacion">Información</a>
-        <a href="profesionales.html">Profesionales</a>
+        <a href="profesionales.html"><span class="nav-long">Información</span><span class="nav-short">Info</span> para profesionales</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -296,6 +300,7 @@
       <p class="lightbox-counter" data-lightbox-counter></p>
     </div>
 
+    <script src="nav.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

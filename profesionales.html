@@ -7,11 +7,11 @@
       name="description"
       content="Información útil para profesionales: novedades del Colegio de Psicólogos de Córdoba, honorarios mínimos y accesos a la Caja de Previsión."
     >
-    <title>Para profesionales | Sintagma</title>
+    <title>Información para profesionales | Sintagma</title>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
     <meta property="og:url" content="https://sintagmaconsultorios.com/profesionales">
-    <meta property="og:title" content="Para profesionales | Sintagma">
+    <meta property="og:title" content="Información para profesionales | Sintagma">
     <meta property="og:description" content="Novedades del Colegio de Psicólogos de Córdoba, honorarios mínimos y accesos a la Caja de Previsión.">
     <meta property="og:image" content="https://sintagmaconsultorios.com/assets/web/og-image-v2.jpg">
     <meta property="og:image:width" content="1200">
@@ -31,11 +31,15 @@
         <img class="brand-logo" src="assets/web/logo.png" alt="" onerror="this.style.display='none'">
       </a>
 
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
         <a href="index.html#espacios">Consultorios</a>
         <a href="index.html#amenities">Servicios</a>
         <a href="index.html#informacion">Información</a>
-        <a href="profesionales.html" aria-current="page">Profesionales</a>
+        <a href="profesionales.html" aria-current="page"><span class="nav-long">Información</span><span class="nav-short">Info</span> para profesionales</a>
         <a href="index.html#contacto">Contacto</a>
       </nav>
     </header>
@@ -110,6 +114,7 @@
       <a href="index.html">Volver al inicio</a>
     </footer>
 
+    <script src="nav.js"></script>
     <script src="profesionales.js"></script>
   </body>
 </html>
