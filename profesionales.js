@@ -75,5 +75,26 @@ const loadFeed = async (name) => {
   }
 };
 
+// El PDF de honorarios cambia de nombre con cada resolución: se toma el link del botón
+// "Ver Aranceles Profesionales Mínimos" de la página Institucionales del Colegio.
+// Si no se encuentra, el link queda apuntando a esa página.
+const loadHonorarios = async () => {
+  try {
+    const response = await fetch("https://cppc.org.ar/wp-json/wp/v2/pages?slug=institucionales&_fields=content", {
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!response.ok) return;
+    const [page] = await response.json();
+    const doc = new DOMParser().parseFromString(page.content.rendered, "text/html");
+    const button = [...doc.querySelectorAll("a")].find((a) => /aranceles profesionales m[ií]nimos/i.test(a.textContent));
+    if (button?.href.startsWith("https://cppc.org.ar/")) {
+      document.querySelector("[data-honorarios]").href = button.href;
+    }
+  } catch {
+    // Queda el link a la página Institucionales.
+  }
+};
+
 loadFeed("cppc");
 loadFeed("caja");
+loadHonorarios();
